@@ -46,4 +46,4 @@ python -m verl.trainer.main_generation \
     rollout.top_p=1.0 \
     rollout.prompt_length=$max_prompt_length \
     rollout.response_length=$max_response_length \
-    rollout.max_num_batched_tokens=8192
+    rollout.max_num_batched_tokens=$(($max_prompt_length + $max_response_length)) \
