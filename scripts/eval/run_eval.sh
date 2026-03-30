@@ -4,6 +4,8 @@ export PYTHONPATH=`pwd`:$PYTHONPATH
 
 # export CUDA_VISIBLE_DEVICES=1,2
 
+n_gpus_per_node=${n_gpus_per_node:-2}
+
 nnodes=1
 tp_size=1
 
@@ -30,7 +32,7 @@ dataset=livecodebench_v5
 
 python -m verl.trainer.main_generation \
     trainer.nnodes=${nnodes} \
-    trainer.n_gpus_per_node=2 \
+    trainer.n_gpus_per_node=${n_gpus_per_node} \
     model.path=${model_path} \
     data.path=${data_dir}/${dataset}.parquet \
     data.output_path=${output_dir}/${dataset}.parquet \
