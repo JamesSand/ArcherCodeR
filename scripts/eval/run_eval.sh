@@ -2,7 +2,7 @@ set -x
 
 export PYTHONPATH=`pwd`:$PYTHONPATH
 
-export CUDA_VISIBLE_DEVICES=1,2
+# export CUDA_VISIBLE_DEVICES=1,2
 
 nnodes=1
 tp_size=1
