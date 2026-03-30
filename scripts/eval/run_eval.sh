@@ -34,7 +34,7 @@ python -m verl.trainer.main_generation \
     model.path=${model_path} \
     data.path=${data_dir}/${dataset}.parquet \
     data.output_path=${output_dir}/${dataset}.parquet \
-    data.batch_size=256 \
+    data.batch_size=32 \
     data.n_samples=${n_samples} \
     rollout.name=vllm \
     rollout.gpu_memory_utilization=0.9 \
